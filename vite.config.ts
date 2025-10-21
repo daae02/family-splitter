@@ -7,10 +7,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 export default defineConfig({
+  base: '/family-splitter/', // ✅ si es Project Page; usa '/' si es user.github.io
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-    },
-  },
+  resolve: { alias: { '@': resolve(__dirname, 'src') } },
 })
